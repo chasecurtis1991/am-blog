@@ -9,18 +9,14 @@ const CommentCard = ({username, comment}) => {
                     <div className="text-indigo-600 text-bold">
                         Bob
                     </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        JUNE 25, 2021 AT 5:46 AM
+                    <div className="text-slate-700 dark:text-slate-500 text-xs uppercase">
+                        June 25, 2021 at 5:46 AM
                     </div>
                 </figcaption>
             </div>
-            <div className="pt-6 text-center md:text-left space-y-4">
-                <blockquote>
-                    <p className="text-sm">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                    </p>
-                </blockquote>
-                <p className="text-sm text-indigo-600 hover:text-indigo-900 float-left pl-3 pb-3">Reply</p>
+            <div className="pt-6 px-0 md:text-left space-y-4">
+                <blockquote className="text-md">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</blockquote>
+                <p className="text-sm text-indigo-600 hover:text-indigo-900"><a href='!#'>Reply</a></p>
             </div>
         </div>
     )
