@@ -19,7 +19,7 @@ export default function BlogPage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage, setPostsPerPage] = useState(10);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -43,14 +43,14 @@ export default function BlogPage() {
   return (
     <>
       {isOpen && <AddPostModal setIsOpen={setIsOpen} />}
-      <div className="container mx-auto mt-5 px-4 pt-4 w-full md:w-4/5 lg:px-4 lg:w-4/5 xl:w-3/4 2xl:w-1/2 h-36 align-middle">
+      <div className="container mx-auto px-4 pt-4 w-full md:w-4/5 lg:px-4 lg:w-4/5 xl:w-3/4 2xl:w-1/2 h-36 align-middle">
         <h1 className="text-5xl font-semibold my-6 float-left">My Blog</h1>
         <button onClick={() => setIsOpen(true)} className="py-2 px-2 my-8 font-medium text-white bg-slate-700 hover:bg-slate-900 rounded float-right">
           Add New Post
         </button>
       </div>
       <PostsList posts={currentPosts} loading={loading}/>
-      <PaginationMenu postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+      <PaginationMenu postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
     </>
   );
 }

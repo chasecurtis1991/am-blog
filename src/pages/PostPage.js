@@ -26,7 +26,7 @@ export default function PostPage() {
 
   return (
     <>
-      <div className="container mx-auto my-5 px-4 py-4 w-full md:w-4/5 lg:my-4 lg:px-4 lg:w-4/5 xl:w-3/4 2xl:w-1/2">
+      <div className="container mx-auto mb-5 px-4 pb-4 pt-2 w-full md:w-4/5 lg:my-4 lg:px-4 lg:w-4/5 xl:w-3/4 2xl:w-1/2">
         <h1 className="text-5xl font-semibold my-6">{post.title}</h1>
         <p className="text-slate-600">{post.body}</p>
       </div>
